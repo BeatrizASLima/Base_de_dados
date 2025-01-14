@@ -1,0 +1,34 @@
+[
+  {
+    $lookup: {
+      from: "autores",
+      localField: "autorIds",
+      foreignField: "autorId",
+      as: "autores"
+    }
+  },
+  {
+    $unwind: "$edicoes"
+  },
+  {
+    $unwind: "$edicoes.paisesVenda"
+  },
+  {
+    $project: {
+      pais: "$edicoes.paisesVenda",
+      titulo: "$tituloOriginal",
+      numeroEdicao: "$edicoes.numeroEdicao",
+      lingua: "$linguaOriginal",
+      autor: {
+        $arrayElemAt: ["$autores.nome", 0]
+      }
+    }
+  },
+  {
+    $sort: {
+      pais: 1,
+      lingua: 1,
+      titulo: 1
+    }
+  }
+]
