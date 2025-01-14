@@ -1,0 +1,50 @@
+db.livros.aggregate([
+  {
+    $project: {
+      tituloOriginal: 1,
+      totalVendas: {
+        $sum: {
+          $map: {
+            input: "$traducoes",
+            as: "trad",
+            in: "$$trad.vendas"
+          }
+        }
+      },
+      totalEdicoes: { $size: "$edicoes" },
+      custoTotal: {
+        $add: [
+          "$custoDireitos",
+          {
+            $sum: {
+              $map: {
+                input: "$traducoes",
+                as: "trad",
+                in: "$$trad.custoProducao"
+              }
+            }
+          }
+        ]
+      },
+      saldo: {
+        $subtract: [
+          { $sum: { $map: { input: "$traducoes", as: "trad", in: "$$trad.Receitas" } } },
+          {
+            $add: [
+              "$custoDireitos",
+              {
+                $sum: {
+                  $map: {
+                    input: "$traducoes",
+                    as: "trad",
+                    in: "$$trad.custoProducao"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]);
