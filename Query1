@@ -1,36 +1,93 @@
-db.autores.aggregate([
+[
   {
-    // Stage 1: Fazer o lookup para relacionar autores com livros
     $lookup: {
-      from: "livros",
-      localField: "autorId",
-      foreignField: "autorIds",
-      as: "livros"
+      from: "Autores",
+      localField: "autorIds",
+      foreignField: "autorId",
+      as: "author_details"
     }
   },
   {
-    // Stage 2: Projetar os dados no formato desejado
-    $project: {
-      nome: 1, // Mostrar o nome do autor
+    $unwind: "$author_details"
+  },
+  {
+    $addFields: {
       idade: {
-        $subtract: [
-          { $year: new Date() }, // Ano atual
-          { $year: { $toDate: "$dataNascimento" } } // Ano de nascimento
+        $cond: [
+          {
+            $gt: [
+              "$author_details.dataFalecimento",
+              null
+            ]
+          },
+          {
+            $subtract: [
+              {
+                $year:
+                  "$author_details.dataFalecimento"
+              },
+              {
+                $year:
+                  "$author_details.dataNascimento"
+              }
+            ]
+          },
+          {
+            $subtract: [
+              2024,
+              {
+                $year:
+                  "$author_details.dataNascimento"
+              }
+            ]
+          }
         ]
       },
-      anosEscrita: {
-        $subtract: ["$fimEscrita", "$inicioEscrita"] // Calcular anos escrevendo
-      },
-      livrosVendidos: {
-        // Somar vendas de todos os livros do autor
+      anoEscrita: {
+        $cond: [
+          {
+            $gt: [
+              "$author_details.fimEscrita",
+              null
+            ]
+          },
+          {
+            $subtract: [
+              "$author_details.fimEscrita",
+              "$author_details.inicioEscrita"
+            ]
+          },
+          {
+            $subtract: [
+              2024,
+              "$author_details.inicioEscrita"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$author_details.autorId",
+      nome: { $first: "$author_details.nome" },
+      idade: { $first: "$idade" },
+      anoEscrita: { $first: "$anoEscrita" },
+      totalLivrosVendidos: {
         $sum: {
-          $map: {
-            input: "$livros.traducoes",
-            as: "trad",
-            in: { $sum: "$$trad.vendas" }
+          $sum: {
+            $map: {
+              input: {
+                $ifNull: ["$traducoes", []]
+              },
+              as: "traducao",
+              in: {
+                $ifNull: ["$$traducao.vendas", 0]
+              }
+            }
           }
         }
       }
     }
   }
-]);
+]
