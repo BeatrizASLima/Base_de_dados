@@ -1,0 +1,251 @@
+[
+  {
+    "livroId": "L001",
+    "tituloOriginal": "Mensagem",
+    "autorIds": ["A001"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1934,
+    "custoDireitos": 15000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Mensagem" },
+      { "pais": "Brasil", "titulo": "Mensagem" },
+      { "pais": "Espanha", "titulo": "Mensaje" },
+      { "pais": "Inglaterra", "titulo": "Message" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L001T001", "tituloTraduzido": "Message", "anoTraducao": 1940, "lingua": "Inglês", "tradutores": ["John Smith"] ,"vendas": 50000, "Receitas": 200000, "custoProducao": 10000 },
+      { "traducaoId": "L001T002", "tituloTraduzido": "Mensaje", "anoTraducao": 1945, "lingua": "Espanhol", "tradutores": ["María García"] ,"vendas": 40000, "Receitas": 160000, "custoProducao": 12000}
+    ],
+    "edicoes": [
+      { "edicaoId": "L001E001", "numeroEdicao": 1, "anoEdicao": 1934, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null},
+      { "edicaoId": "L001E002", "numeroEdicao": 2, "anoEdicao": 1940, "paisesVenda": ["Espanha"], "traducaoId": "L001T002" },
+      { "edicaoId": "L001E003", "numeroEdicao": 3, "anoEdicao": 1945, "paisesVenda": ["Inglaterra"], "traducaoId": "L001T001" }
+    ]
+  },
+
+
+
+  {
+    "livroId": "L002",
+    "tituloOriginal": "Ensaio Sobre a Cegueira",
+    "autorIds": ["A002"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1995,
+    "custoDireitos": 20000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Ensaio Sobre a Cegueira" },
+      { "pais": "Brasil", "titulo": "Ensaio Sobre a Cegueira" },
+      { "pais": "Espanha", "titulo": "Ensayo sobre la Ceguera" },
+      { "pais": "Inglaterra", "titulo": "Blindness" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L002T001", "tituloTraduzido": "Ensayo sobre la Ceguera", "anoTraducao": 1996, "lingua": "Espanhol", "tradutores": ["Margaret Costa"] , "vendas": 60000, "Receitas": 300000, "custoProducao": 15000 },
+      { "traducaoId": "L002T001", "tituloTraduzido": "Blindness", "anoTraducao": 1998, "lingua": "Inglês", "tradutores": ["Julliet Santos"] , "vendas": 30000, "Receitas": 170000, "custoProducao": 12000 }
+    ],
+    "edicoes": [
+      { "edicaoId": "L002E001", "numeroEdicao": 1, "anoEdicao": 1995, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null},
+      { "edicaoId": "L002E002", "numeroEdicao": 2, "anoEdicao": 1996, "paisesVenda": ["Espanha"], "traducaoId": "L002T001" },
+      { "edicaoId": "L002E003", "numeroEdicao": 3, "anoEdicao": 1998, "paisesVenda": ["Inglaterra"], "traducaoId": "L003T002" }
+    ]
+  },
+
+
+  {
+    "livroId": "L003",
+    "tituloOriginal": "Os Maias",
+    "autorIds": ["A003"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1888,
+    "custoDireitos": 20000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Os Maias" },
+      { "pais": "Brasil", "titulo": "Os Maias" },
+      { "pais": "Espanha", "titulo": "los Maya" },
+      { "pais": "França", "titulo": "Les Maias" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L003T001", "tituloTraduzido": "The Maias", "anoTraducao": 1890, "lingua": "Espanhol", "tradutores": ["Jean Dupont"] ,"vendas": 60000, "Receitas": 250000, "custoProducao": 15000},
+      { "traducaoId": "L003T002", "tituloTraduzido": "Les Maias", "anoTraducao": 1892, "lingua": "Francês", "tradutores": ["Claude Hugo"] ,"vendas": 30000, "Receitas": 120000, "custoProducao": 8000}
+    ],
+    "edicoes": [
+      { "edicaoId": "L003E001", "numeroEdicao": 1, "anoEdicao": 1888, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null},
+      { "edicaoId": "L003E002", "numeroEdicao": 2, "anoEdicao": 1892, "paisesVenda": ["França"], "traducaoId": "L003T002"},
+      { "edicaoId": "L003E003", "numeroEdicao": 3, "anoEdicao": 1890, "paisesVenda": ["Espanha"], "traducaoId": "L003T001"}
+    ]
+  },
+
+
+  {
+    "livroId": "L004",
+    "tituloOriginal": "A Menina do Mar",
+    "autorIds": ["A004"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1958,
+    "custoDireitos": 10000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "A Menina do Mar" },
+      { "pais": "Brasil", "titulo": "A Menina do Mar" },
+      { "pais": "Espanha", "titulo": "La nina del Mar" },
+      { "pais": "França", "titulo": "La fille de la Mer" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L004T001", "tituloTraduzido": "La nina del Mar", "anoTraducao": 1960, "lingua": "Espanhol", "tradutores": ["Mary Silva"] ,"vendas": 40000, "Receitas": 120000, "custoProducao": 8000},
+      { "traducaoId": "L004T002", "tituloTraduzido": "La fille de la Mer", "anoTraducao": 1962, "lingua": "Francês", "tradutores": ["Estelle Fournier"] ,"vendas": 20000, "Receitas": 60000, "custoProducao": 4000}
+    ],
+    "edicoes": [
+      { "edicaoId": "L004E001", "numeroEdicao": 1, "anoEdicao": 1958, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null},
+      { "edicaoId": "L004E002", "numeroEdicao": 2, "anoEdicao": 1960, "paisesVenda": ["Espanha"], "traducaoId": "L004T001"},
+      { "edicaoId": "L004E003", "numeroEdicao": 3, "anoEdicao": 1962, "paisesVenda": ["França"], "traducaoId": "L004T002"}
+    ]
+  },
+
+  {
+    "livroId": "L005",
+    "tituloOriginal": "Os Lusíadas",
+    "autorIds": ["A005"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1572,
+    "custoDireitos": 25000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Os Lusíadas" },
+      { "pais": "Brasil", "titulo": "Os Lusíadas" },
+      { "pais": "Espanha", "titulo": "los Lusíadas" },
+      { "pais": "Inglaterra", "titulo": "The Lusiades" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L005T001", "tituloTraduzido": "The Lusiads", "anoTraducao": 1580, "lingua": "Inglês", "tradutores": ["John Milton"] ,"vendas": 70000, "Receitas": 400000, "custoProducao": 20000 },
+      { "traducaoId": "L005T002", "tituloTraduzido": "The Lusiads", "anoTraducao": 1581, "lingua": "Espanhol", "tradutores": ["Alfredo Soares"] ,"vendas": 35000, "Receitas": 200000, "custoProducao": 10000 }
+    ],
+    "edicoes": [
+      { "edicaoId": "L005E001", "numeroEdicao": 1, "anoEdicao": 1572, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null },
+      { "edicaoId": "L005E002", "numeroEdicao": 2, "anoEdicao": 1580, "paisesVenda": ["Espanha"], "traducaoId": "L005T002" },
+      { "edicaoId": "L005E003", "numeroEdicao": 3, "anoEdicao": 1581, "paisesVenda": ["Inglaterra"], "traducaoId": "L005T001" }
+    ]
+  },
+
+
+  {
+    "livroId": "L006",
+    "tituloOriginal": "A Sibila",
+    "autorIds": ["A006"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1954,
+    "custoDireitos": 12000,
+    "paisesPublicacao": [
+      {"pais": "Portugal","título": "A Sibila"},
+      { "pais":"Brasil","título": "A Sibila"},
+      {"pais":"Inglaterra","título": "The Sibyl"},
+      { "pais":"França", "título": "La Sibylle"}
+    ],
+    "traducoes": [
+      { "traducaoId": "L006T001", "tituloTraduzido": "The Sibyl", "anoTraducao": 1958, "lingua": "Inglês", "tradutores": ["Naomi Walford"] , "vendas": 30000, "Receitas": 100000, "custoProducao": 8000},
+      { "traducaoId": "L006T002", "tituloTraduzido": "La Sibylle", "anoTraducao": 1957, "lingua": "francês", "tradutores": ["Marguerite Gay and Gerd de Mautor"] , "vendas": 15000, "Receitas": 50000, "custoProducao": 4000}
+
+    ],
+    "edicoes": [
+      { "edicaoId": "L006E001", "numeroEdicao": 1, "anoEdicao": 1954, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null},
+      { "edicaoId": "L006E002", "numeroEdicao": 2, "anoEdicao": 1958, "paisesVenda": ["Francês"], "traducaoId": "L006T002"},
+      { "edicaoId": "L006E003", "numeroEdicao": 3, "anoEdicao": 1967, "paisesVenda": ["Inglaterra"], "traducaoId": "L006T001 "}
+    ]
+  },
+
+  
+  {
+    "livroId": "L007",
+    "tituloOriginal": "Rosa, Minha Irmã Rosa",
+    "autorIds": ["A007"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1979,
+    "custoDireitos": 9000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Rosa, Minha Irmã Rosa" },
+      { "pais": "Brasil", "titulo": "Rosa, Minha Irmã Rosa" },
+      { "pais": "Espanha", "titulo": "Rose, My Sister Rose" },
+      { "pais": "Inglaterra", "titulo": "Rose, My Sister Rose" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L007T001", "tituloTraduzido": "Rose, My Sister Rose", "anoTraducao": 1982, "lingua": "Inglês", "tradutores": ["Angela Costa"] , "vendas": 20000, "Receitas": 80000, "custoProducao": 5000},
+      { "traducaoId": "L007T002", "tituloTraduzido": "Rose, My Sister Rose", "anoTraducao": 1982, "lingua": "Espanhol", "tradutores": ["MariaLópez"] , "vendas": 15000, "Receitas": 60000, "custoProducao": 3000}
+    ],
+    "edicoes": [
+      { "edicaoId": "L007T001", "numeroEdicao": 1, "anoEdicao": 1979, "paisesVenda": ["Portugal"], "traducaoId": null },
+      { "edicaoId": "L007T002", "numeroEdicao": 2, "anoEdicao": 1982, "paisesVenda": ["Espanha"], "traducaoId": "L007T002" },
+      { "edicaoId": "L007T003", "numeroEdicao": 3, "anoEdicao": 1982, "paisesVenda": ["Inglaterra"], "traducaoId": "L007T001" }
+    ]
+  },
+
+  {
+    "livroId": "L008",
+    "tituloOriginal": "Memória de Elefante",
+    "autorIds": ["A008"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1979,
+    "custoDireitos": 15000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Memória de Elefante" },
+      { "pais": "Brasil", "titulo": "Memória de Elefante" },
+      { "pais": "Espanha", "titulo": "Memoria del elefante" },
+      { "pais": "França", "titulo": "Mémoire d'éléphant" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L008T001", "tituloTraduzido": "Memoria del elefante", "anoTraducao": 1981, "lingua": "Espanhol", "tradutores": ["George White"] , "vendas": 25000, "Receitas": 100000, "custoProducao": 8000},
+      { "traducaoId": "L008T00", "tituloTraduzido": "Mémoire d'éléphant", "anoTraducao": 1985, "lingua": "Francês", "tradutores": ["Pablo Serrano"] , "vendas": 12000, "Receitas": 50000, "custoProducao": 4000}
+    ],
+    "edicoes": [
+      { "edicaoId": "L008T001", "numeroEdicao": 1, "anoEdicao": 1979, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null },
+      { "edicaoId": "L008T002", "numeroEdicao": 2, "anoEdicao": 1981, "paisesVenda": ["Espanha"], "traducaoId": "L008T001" },
+      { "edicaoId": "L008T003", "numeroEdicao": 3, "anoEdicao": 1985, "paisesVenda": ["França"], "traducaoId": "L008T002" }
+    ]
+  },
+
+
+  {
+    "livroId": "L009",
+    "tituloOriginal": "Bichos",
+    "autorIds": ["A009"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1940,
+    "custoDireitos": 12000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "Bichos" },
+      { "pais": "Brasil", "titulo": "Bichos" },
+      { "pais": "Espanha", "titulo": "Los Bichos" },
+      { "pais": "França", "titulo": "Animales" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L009T001", "tituloTraduzido": "Los Bichos", "anoTraducao": 1941, "lingua": "Espanhol", "tradutores": ["Mark Stone"] ,"vendas": 15000, "Receitas": 60000, "custoProducao": 4000},
+      { "traducaoId": "L009T002", "tituloTraduzido": "Los Bichos", "anoTraducao": 1945, "lingua": "França", "tradutores": ["Marie Leclerc"] ,"vendas": 7500, "Receitas": 30000, "custoProducao": 2100}
+    ],
+    "edicoes": [
+      { "edicaoId": "L009T001", "numeroEdicao": 1, "anoEdicao": 1940, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null },
+      { "edicaoId": "L009T002", "numeroEdicao": 2, "anoEdicao": 1941, "paisesVenda": ["Espanha"], "traducaoId": "L009T001" },
+      { "edicaoId": "L009T003", "numeroEdicao": 3, "anoEdicao": 1945, "paisesVenda": ["França"], "traducaoId": "L009T002" }
+    ]
+  },
+
+
+  {
+    "livroId": "L010",
+    "tituloOriginal": "O Meu Caso",
+    "autorIds": ["A010"],
+    "linguaOriginal": "Português",
+    "anoEscrito": 1956,
+    "custoDireitos": 10000,
+    "paisesPublicacao": [
+      { "pais": "Portugal", "titulo": "O Meu Caso" },
+      { "pais": "Brasil", "titulo": "O Meu Caso" },
+      { "pais": "Espanha", "titulo": "Mi Caso" },
+      { "pais": "França", "titulo": "Mon Cas" }
+    ],
+    "traducoes": [
+      { "traducaoId": "L010T001", "tituloTraduzido": "Mi Caso", "anoTraducao": 1957, "lingua": "Espanhol", "tradutores": ["Maria Maia"] ,"vendas": 22000, "Receitas": 72800, "custoProducao": 4800 },
+      { "traducaoId": "L010T002", "tituloTraduzido": "Mon Cas", "anoTraducao": 1958, "lingua": "Francês", "tradutores": ["Eduardo Marques"] ,"vendas": 18000, "Receitas": 69000, "custoProducao": 5090 }
+
+    ],
+    "edicoes": [
+      { "edicaoId": "L010T001", "numeroEdicao": 1, "anoEdicao": 1956, "paisesVenda": ["Portugal", "Brasil"], "traducaoId": null },
+      { "edicaoId": "L010T002", "numeroEdicao": 2, "anoEdicao": 1957, "paisesVenda": ["Espanha"], "traducaoId": "L010T001" },
+      { "edicaoId": "L010T003", "numeroEdicao": 3, "anoEdicao": 1958, "paisesVenda": ["França"], "traducaoId": "L010T002" }
+    ]
+  }
+]
