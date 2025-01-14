@@ -1,0 +1,36 @@
+db.autores.aggregate([
+  {
+    // Stage 1: Fazer o lookup para relacionar autores com livros
+    $lookup: {
+      from: "livros",
+      localField: "autorId",
+      foreignField: "autorIds",
+      as: "livros"
+    }
+  },
+  {
+    // Stage 2: Projetar os dados no formato desejado
+    $project: {
+      nome: 1, // Mostrar o nome do autor
+      idade: {
+        $subtract: [
+          { $year: new Date() }, // Ano atual
+          { $year: { $toDate: "$dataNascimento" } } // Ano de nascimento
+        ]
+      },
+      anosEscrita: {
+        $subtract: ["$fimEscrita", "$inicioEscrita"] // Calcular anos escrevendo
+      },
+      livrosVendidos: {
+        // Somar vendas de todos os livros do autor
+        $sum: {
+          $map: {
+            input: "$livros.traducoes",
+            as: "trad",
+            in: { $sum: "$$trad.vendas" }
+          }
+        }
+      }
+    }
+  }
+]);
