@@ -1,0 +1,48 @@
+[
+  {
+    "$unwind": "$edicoes"
+  },
+  {
+    "$lookup": {
+      "from": "Autores",
+      "localField": "autorIds",
+      "foreignField": "autorId",
+      "as": "autoresDetalhes"
+    }
+  },
+  {
+    "$addFields": {
+      "traducaoDetalhes": {
+        "$arrayElemAt": [
+          {
+            "$filter": {
+              "input": "$traducoes",
+              "as": "traducao",
+              "cond": { "$eq": ["$$traducao.traducaoId", "$edicoes.traducaoId"] }
+            }
+          },
+          0
+        ]
+      }
+    }
+  },
+  {
+    "$project": {
+      "_id": 0,
+      "tituloOriginal": "$tituloOriginal",
+      "tituloTraduzido": {
+        "$ifNull": ["$traducaoDetalhes.tituloTraduzido", "N/A"]
+      },
+      "anoOriginal": "$anoEscrito",
+      "anoEdicao": "$edicoes.anoEdicao",
+      "numeroEdicao": "$edicoes.numeroEdicao",
+      "tradutores": {
+        "$ifNull": ["$traducaoDetalhes.tradutores", ["N/A"]]
+      },
+      "linguaTraducao": {
+        "$ifNull": ["$traducaoDetalhes.lingua", "Original"]
+      },
+      "autores": "$autoresDetalhes.nome"
+    }
+  }
+]
