@@ -1,0 +1,23 @@
+[
+  {
+    "$unwind": {
+      "path": "$paisesPublicacao",
+      "preserveNullAndEmptyArrays": false
+    }
+  },
+  {
+    "$project": {
+      "_id": 0,
+      "Livro ID": "$livroId",
+      "Título Original": "$tituloOriginal",
+      "País": "$paisesPublicacao.pais",
+      "Título no País": "$paisesPublicacao.titulo"
+    }
+  },
+  {
+    "$sort": {
+      "Livro ID": 1,
+      "País": 1
+    }
+  }
+]
